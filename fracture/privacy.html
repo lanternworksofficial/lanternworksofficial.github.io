@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fracture Privacy Policy — Lanternworks</title>
+  <meta name="description" content="How Fracture by Lanternworks handles account, progress, multiplayer, diagnostic and advertising data.">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><nav aria-label="Main"><a href="index.html">Fracture by Lanternworks</a><a href="privacy.html" aria-current="page">Privacy policy</a><a href="delete-account.html">Delete account</a></nav></header>
+<main id="main">
+  <p class="eyebrow">Last updated: 29 October 2026</p>
+  <h1>Privacy policy</h1>
+  <p>This policy explains how Lanternworks handles information when you use Fracture, our Android puzzle game (application ID <code>com.fracturegame.fracture</code>). It applies to testing and public versions; some services differ between those versions.</p>
+
+  <h2>1. Accounts and guest play</h2>
+  <p>You can play as a guest. When Firebase is available, the app may create an anonymous account with a unique identifier to save progress. Guest play therefore does not always mean that all data stays on your device.</p>
+  <p>If you use Google sign-in, Firebase Authentication processes the information required to authenticate you. Fracture stores your user ID, display name, Google account email address when available, account creation time and guest/account status. Google sign-in does not give Lanternworks your Google password.</p>
+
+  <h2>2. Progress, preferences and multiplayer</h2>
+  <p>The app saves progress and settings on your device and synchronizes a profile to Cloud Firestore when available. This includes puzzle/session totals, solves per mode (including the home-screen widget), hint-free solves, total and fastest solve times, multiplayer matches played, won and finished on the podium, your best Infinite session, streaks, daily completions, earned daily unlocks, Career progress, permanent theme unlocks, up to 50 recent Infinite Mode session records, and sound or other settings. The profile also includes edit/synchronization timestamps, including when you last changed your display name.</p>
+  <p>Multiplayer stores a lobby code, host and player identifiers, display names, join/start/expiry times, match settings, puzzle batch and player progress/scores. Display names and standings are shown to participants. A lobby is open for 2 hours after it is created. A guest who leaves the waiting room is removed from the lobby, and the host can close a lobby that has not started. Lobby documents are currently readable by authenticated app accounts; a room code should not be treated as a security guarantee. Do not put sensitive personal information in a display name.</p>
+
+  <h2>3. Information stored locally</h2>
+  <p>Local preferences include a saved profile, synchronization state, language/appearance choices, temporary theme access, tutorial completion, the Infinite Mode skip counter, and daily share details such as moves, hints, solve time and occupied gaps. Local share details are not themselves uploaded as share records to Firestore. Your device's operating-system backup settings may affect local app storage.</p>
+
+  <h2>4. Diagnostics and analytics</h2>
+  <p>Firebase Crashlytics collects crash and diagnostic information in release builds, including release builds distributed to testers. This can include stack traces, app/device information and installation identifiers. Firebase Analytics is enabled in release builds, including builds distributed to testers, to help us understand how the game is played and improve it. It records gameplay events such as a puzzle being started, solved or skipped (with the mode, number of digits, time taken, moves and hints used), daily puzzle completions and streak length, Career levels completed, tutorial progress, multiplayer lobbies created, joined and finished (with your finishing place), theme changes, sharing of daily results, update checks, hint use and rewarded theme access. It also records a few settings-level properties: your selected theme, whether a home-screen widget is installed, and whether the build is a test or production build. These events contain no names, email addresses or text you type. Analytics uses an app-instance identifier, the device's advertising ID where the device makes it available, and device/app information collected by the Firebase SDK, including information about how the app was installed. You can reset or delete the advertising ID in your Android settings.</p>
+  <p>The app checks Google Play for a newer version and may offer an in-app update. Google Play handles that check and the update under its own terms.</p>
+  <p>If you add the Fracture home-screen widget, it keeps its current puzzle and your recent widget activity on the device. The app adds widget solves to your saved progress, and with analytics enabled it sends simple widget events the next time you open the app: that the widget was shown on your home screen that day (and how many widgets are placed), a puzzle solved or skipped on it, the widget opening the app, and the widget being added or removed. The widget needs no extra permissions.</p>
+  <p>Fracture can remind you to play: a morning puzzle, a nudge when your daily streak is at stake, and Weekend and Monthend Mania. Reminders are scheduled and shown entirely on your device. To show them, the app asks for permission to post notifications and to re-schedule them after your phone restarts. Your reminder times and the next two weeks of daily puzzles are stored on the device so reminders work offline. No reminder data is sent to us or to anyone else, and reminders send no analytics events. You can turn each reminder off or change its time in Settings → Reminders, or turn off notifications for Fracture in your Android settings.</p>
+  <p>Debug builds and explicitly enabled non-live test builds can also keep a separate, bounded local diagnostic history of up to 300 entries. This history is not automatically uploaded. If you choose to copy it and send it to support, the information you send is used to investigate your report. Avoid including passwords or other secrets.</p>
+
+  <h2>5. Advertising and consent</h2>
+  <p>Fracture uses Google AdMob for banner and optional rewarded ads. Testing builds use Google's test ad units. Live builds use production units. Depending on SDK configuration and consent, Google Mobile Ads processes identifiers, IP addresses (which may indicate approximate location), ad/app interactions and diagnostic information for advertising, measurement and fraud prevention.</p>
+  <p>Where applicable, Google's User Messaging Platform presents privacy choices before ad requests are allowed. A Privacy choices entry appears in Settings when the consent platform requires it. Ad personalization and identifier availability depend on your choices, device settings and applicable requirements. No camera, microphone, contacts or precise-location access is needed for the described puzzle gameplay; SDK/network permissions are separate from runtime permission prompts.</p>
+
+  <h2>6. Why information is used and who processes it</h2>
+  <p>Information is used to authenticate accounts, save and synchronize progress, run multiplayer, provide optional ads/rewards, diagnose problems and support users. Google provides Firebase Authentication, Cloud Firestore, Crashlytics, Analytics and AdMob. Processing may occur outside your country under those providers' applicable terms and safeguards.</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+    <li><a href="https://firebase.google.com/support/privacy">Firebase privacy and security information</a></li>
+    <li><a href="https://support.google.com/admob/answer/6128543">Google advertising privacy information</a></li>
+  </ul>
+
+  <h2>7. Sharing a daily result or a lobby invite</h2>
+  <p>Sharing is initiated by you through the system share sheet. The generated text/image includes the challenge date, streak, moves, hint count, solve time, a spoiler-free gap pattern, app branding and invitation. The app you select receives that content under its own policies. A fallback can copy the text to your clipboard. Sharing does not expose the puzzle's digits, target or operators in the generated result.</p>
+  <p>When you invite friends to a multiplayer lobby, the share sheet sends a short invitation text with the lobby code to the app you choose.</p>
+
+  <h2>8. Retention and deletion</h2>
+  <p>Cloud profiles remain until deleted. The app limits recent Infinite Mode history to 50 records. Lobby expiry controls joining; it is not an automatic deletion schedule. An expired lobby's record can be overwritten when its code is reused, starting an hour after it expires; otherwise it remains. Diagnostic/advertising services have their own retention practices; removing a Fracture account does not automatically erase every provider-held record.</p>
+  <p>The in-app Delete account (or Delete my data for guests) action deletes the active environment's cloud profile and Firebase account, resets the saved local profile, and starts a fresh guest. It may require reauthentication and network access. Existing lobby copies, a profile in the other test/live environment, and some local preferences/share records, including the home-screen widget's current puzzle and queued widget activity, are not automatically removed by that action. Clearing Android app storage removes remaining local app data.</p>
+  <p>You can request deletion of remaining associated data or request account deletion without reinstalling the app by following our <a href="delete-account.html">account-deletion instructions</a>. Contact us about access, correction or deletion requests and any applicable rights. We may need to verify account ownership without asking for your password.</p>
+
+  <h2>9. Age audience</h2>
+  <p>Fracture is intended for people aged 13 and over, not for children under 13. Local rules may require parental permission for teenagers to use particular services. If you believe a child under 13 has provided information to us, contact us so we can investigate and address it.</p>
+
+  <h2>10. Changes and security</h2>
+  <p>We use the access controls and secure transport provided by our service providers, but no system can guarantee absolute security. We may update this policy as the app or its data practices change; the date at the top identifies this version.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions about this policy or the app? Email us at <a href="mailto:lanternworks.official@gmail.com">lanternworks.official@gmail.com</a>.</p>
+</main>
+<footer>Fracture · Lanternworks · Ages 13+</footer>
+</body>
+</html>
